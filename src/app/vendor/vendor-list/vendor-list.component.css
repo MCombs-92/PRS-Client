@@ -1,0 +1,13 @@
+.Content {
+    height: 90vh;
+}
+
+.Function {
+    text-align: center;
+}
+
+.Function .btn-dark {
+    background-color: #391439;
+    margin-top: 30px;
+    width: 200px;
+}

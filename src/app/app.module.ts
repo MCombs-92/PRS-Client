@@ -11,6 +11,10 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { NavComponent } from './nav/nav.component';
     UserEditComponent,
     UserListComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    VendorListComponent,
+    VendorCreateComponent,
+    VendorEditComponent,
+    VendorDetailComponent
   ],
   imports: [
     BrowserModule,
