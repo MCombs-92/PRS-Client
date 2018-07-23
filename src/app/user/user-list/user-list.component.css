@@ -6,4 +6,27 @@
     width: 50%;
     margin: auto;
     text-align: center;
+    margin-top: 50px;
+}
+
+#Controls .btn {
+    width: 250px;
+
+}
+
+#Controls .btn-dark {
+    background-color: #391439;
+}
+
+#Content a {
+    color: #391439;
+}
+
+#Header {
+    text-align: center;
+}
+
+#Header p {
+    font-size: 48pt;
+    font-weight: bold;
 }

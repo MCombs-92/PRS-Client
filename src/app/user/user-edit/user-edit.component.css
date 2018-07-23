@@ -8,3 +8,12 @@
 label {
     width: 100px;
 }
+
+#function {
+    text-align: center;
+}
+
+#function .btn {
+    width: 200px;
+
+}

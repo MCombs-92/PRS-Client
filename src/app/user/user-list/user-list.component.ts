@@ -11,6 +11,8 @@ export class UserListComponent implements OnInit {
 
   users: User[];
 
+  Header = "Registered Users";
+
   constructor(private usersvc: UserService) { }
 
   ngOnInit() {

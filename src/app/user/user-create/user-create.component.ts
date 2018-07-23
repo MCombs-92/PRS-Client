@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -20,10 +21,11 @@ export class UserCreateComponent implements OnInit {
     this.usersvc.create(this.user)
       .subscribe(resp => {
         console.log(resp);
+        this.router.navigateByUrl("/users/list")
       });
   }
 
-  constructor(private usersvc: UserService) { }
+  constructor(private usersvc: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
   }

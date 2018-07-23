@@ -1,6 +1,76 @@
-<div class="input-group input-group-sm mb-3">
-  <div class="input-group-prepend">
-    <label class="input-group-text" for="Firstname">Firstname</label>
-  </div>
-  <input [(ngModel)]="user.Firstname" name="Firstname" type="text" class="form-control" id="Firstname">
+<div id="Content">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Firstname">First Name</label>
+        </div>
+        <input [(ngModel)]="user.FirstName" name="Firstname" type="text" class="form-control" id="Firstname">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Lastname">Last Name</label>
+        </div>
+        <input [(ngModel)]="user.LastName" name="Lastname" type="text" class="form-control" id="Lastname">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Username">Username</label>
+        </div>
+        <input [(ngModel)]="user.Username" name="Username" type="text" class="form-control" id="Username">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Password">Password</label>
+        </div>
+        <input [(ngModel)]="user.Password" name="Password" type="text" class="form-control" id="Password">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Email">Email</label>
+        </div>
+        <input [(ngModel)]="user.Email" name="Email" type="text" class="form-control" id="Email">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Phone">Phone</label>
+        </div>
+        <input [(ngModel)]="user.Phone" name="Phone" type="text" class="form-control" id="Phone">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="IsReviewer">Is Reviewer</label>
+        </div>
+        <select [(ngModel)]="user.IsReviewer" name="IsReviewer" type="text" class="form-control" id="IsReviewer">
+          <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{ opt.display }}</option>
+        </select>
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="IsAdmin">Is Admin</label>
+        </div>
+        <select [(ngModel)]="user.IsAdmin" name="IsAdmin" type="text" class="form-control" id="IsAdmin">
+          <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{ opt.display }}</option>
+        </select>
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Active">Is Active</label>
+        </div>
+        <select [(ngModel)]="user.Active" name="Active" type="text" class="form-control" id="Active">
+          <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{ opt.display }}</option>
+        </select>
+    </div>
+
+    <div id="function">
+      <button (click)="create()" class="btn btn-lg btn-primary">Create User</button>
+    </div>
+
+
 </div>
