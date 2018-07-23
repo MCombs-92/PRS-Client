@@ -1,3 +1,73 @@
-<p>
-  user-detail works!
-</p>
+<div id = "Content">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Firstname">First Name</label>
+        </div>
+        <input [(ngModel)]="user.FirstName" name="Firstname" readonly type="text" class="form-control" id="Firstname">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Lastname">Last Name</label>
+      </div>
+      <input [(ngModel)]="user.LastName" name="Lastname" readonly type="text" class="form-control" id="Lastname">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Username">Username</label>
+        </div>
+        <input [(ngModel)]="user.Username" name="Username" readonly type="text" class="form-control" id="Username">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Pasword">Password</label>
+        </div>
+        <input [(ngModel)]="user.Password" name="Password" readonly type="text" class="form-control" id="Password">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="Email">Last Name</label>
+        </div>
+        <input [(ngModel)]="user.Email" name="Email" readonly type="text" class="form-control" id="Email">
+      </div>
+
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="Phone">Phone</label>
+          </div>
+          <input [(ngModel)]="user.Phone" name="Phone" readonly type="text" class="form-control" id="Phone">
+      </div>
+
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="IsReviewer">Is Reviewer</label>
+          </div>
+          <input [(ngModel)]="user.IsReviewer" name="IsReviewer" readonly class="form-control" id="IsReviewer">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class= "input-group-text" for="IsAdmin">Is Admin</label>
+        </div>
+        <input [(ngModel)]="user.IsAdmin" name="IsAdmin" readonly class="form-control" id="IsAdmin">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class= "input-group-text" for="Acitve">Is Active</label>
+       </div>
+        <input [(ngModel)]="user.Active" name="Active" readonly class="form-control" id="Active">
+      </div>
+
+      <div id="function">
+          <button routerLink="/users/edit/{{user.Id}}" class="btn btn-lg btn-success">Update Info</button>
+          <button (click)="Remove()" class="btn btn-lg btn-danger">Remove User</button> |
+          <span *ngIf="Removed">
+            | <button (click)="Verified()" class="btn btn-lg btn-danger">Confirm</button>
+
+          </span>
+      </div>
+</div>
