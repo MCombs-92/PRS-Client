@@ -1,0 +1,18 @@
+
+#Titlecase {
+    margin: 0px;
+    padding: 0px;
+    Height: 90vh;
+}
+
+#Title {
+    font-size: 86pt;
+    text-align: center;
+    margin-top: 250px;
+    color: #391439;
+}
+
+#credit {
+    font-size: 14pt;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+* {
+    padding: 0x;
+    margin: 0px;
+}
+
+#topnav {
+    background-color: #391439;
+    height: 65px;
+}
+
+#home {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 25px 10px 0px;
+    color: white;
+    font-size: 20pt;
+}
+
+nav ul li a {
+    text-decoration: None;
+    color: white;
+}
+
+#Container {
+    padding: 0px;
+    margin: 0px;
+}

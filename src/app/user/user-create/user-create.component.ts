@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-create',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCreateComponent implements OnInit {
 
-  constructor() { }
+  boolOptions = [
+    { display: 'Yes', value: true },
+    { display: 'No', value: false }
+  ];
+
+  user: User = new User;
+
+  create(): void {
+    this.usersvc.create(this.user)
+      .subscribe(resp => {
+        console.log(resp);
+      });
+  }
+
+  constructor(private usersvc: UserService) { }
 
   ngOnInit() {
   }
