@@ -1,3 +1,39 @@
-<p>
-  request-list works!
-</p>
+<div id="Header">
+    <p>{{ Title }}</p>
+</div>
+
+<div class="Content">
+<table class="table table-striped">
+    <tr>
+        <th>User</th>
+        <th>Description</th>
+        <th>Justification</th>
+        <th>Delivery</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Active?</th>
+        <th>Actions</th>
+    
+    </tr>
+    <tr *ngFor="let p of purchaserequests">
+        <td>{{ p.User.Username }}</td>
+        <td>{{ p.Description }}</td>
+        <td>{{ p.Justification }}</td>
+        <td>{{ p.DeliveryMode }}</td>
+        <td>{{ p.Total | currency }}</td>
+        <td>{{ p.Status }}</td>
+        <td>{{ p.Active | bool }}</td>
+        <td>
+          <span><a routerLink="/requests/detail/{{ p.Id }}">Detail</a></span>
+          <span> | </span>
+          <span><a routerLink="/requests/edit/{{ p.Id }}">Edit</a></span>
+          <span> | </span>
+          <span><a>Lines</a></span>
+        </td>
+    </tr>
+</table>
+
+<div class="Function">
+  <button class="btn btn-dark" routerLink="/requests/create">Add Request</button>
+</div>
+</div>

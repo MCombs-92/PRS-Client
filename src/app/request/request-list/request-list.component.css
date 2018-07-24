@@ -1,0 +1,22 @@
+.Content {
+    height: 95vh;
+}
+
+.Function {
+    text-align: center;
+}
+
+.Function .btn-dark {
+    background-color: #391439;
+    margin-top: 30px;
+    width: 200px;
+}
+
+#Header {
+    text-align: center;
+}
+
+#Header p {
+    font-size: 48pt;
+    font-weight: bold;
+}
