@@ -1,3 +1,63 @@
-<p>
-  product-edit works!
-</p>
+<div id= "Content">
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class= "input-group-text" for="Vendor">Vendor</label>
+       </div>
+        <select [(ngModel)]="product.VendorId" name="Vendor" class="form-control" id="Vendor">
+          <option *ngFor="let vendor of vendors" [ngValue]="vendor.Id">{{ vendor.Name }}</option>
+        </select >
+      </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Name">Name</label>
+      </div>
+      <input [(ngModel)]="product.Name" name="Name" type="text" class="form-control" id="Name">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="PartNumber">Part Number</label>
+      </div>
+      <input [(ngModel)]="product.PartNumber" name="PartNumber" type="text" class="form-control" id="PartNumber">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Price">Price</label>
+      </div>
+      <input [(ngModel)]="product.Price" name="Price" type="text" class="form-control" id="Price">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Unit">Unit</label>
+      </div>
+      <input [(ngModel)]="product.Unit" name="Unit" type="text" class="form-control" id="Unit">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="PhotoPath">Photo Path</label>
+      </div>
+      <input [(ngModel)]="product.PhotoPath" name="PhotoPath" type="text" class="form-control" id="PhotoPath">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class= "input-group-text" for="Active">Active?</label>
+     </div>
+      <select [(ngModel)]="product.Active" name="Active" class="form-control" id="Active">
+        <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{opt.display}}</option>
+      </select >
+    </div>
+  
+    <div id="Function">
+      <button (click)="change()" class="btn btn-success">Update</button>
+  
+    </div>
+  
+  
+  </div>
+  

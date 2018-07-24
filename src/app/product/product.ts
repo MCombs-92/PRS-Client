@@ -2,6 +2,7 @@ import { Vendor } from '../vendor/vendor'
 
 export class Product {
     Id: number;
+    Name: string;
     VendorId: number;
     Vendor: Vendor;
     PartNumber: string;
@@ -16,6 +17,7 @@ export class Product {
         this.Price = 0;
         this.Unit = 'Each';
         this.Active = true;
+        this.PhotoPath = "None";
       }
 
 }

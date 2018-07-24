@@ -1,3 +1,37 @@
-<p>
-  product-list works!
-</p>
+<div id="Header">
+    <p>{{ Title }}</p>
+</div>
+
+<div class="Content">
+<table class="table table-striped">
+    <tr>
+        <th>Vendor</th>
+        <th>Name</th>
+        <th>Part Number</th>
+        <th>Price</th>
+        <th>Unit</th>
+        <th>Photo Path</th>
+        <th>Active?</th>
+        <th>Actions</th>
+    
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{ p.Vendor.Name }}</td>
+        <td>{{ p.Name }}</td>
+        <td>{{ p.PartNumber }}</td>
+        <td>{{ p.Price | currency }}</td>
+        <td>{{ p.Unit }}</td>
+        <td>{{ p.PhotoPath }}</td>
+        <td>{{ p.Active | bool }}</td>
+        <td>
+          <span><a routerLink="/products/detail/{{ p.Id }}">Detail</a></span>
+          <span> | </span>
+          <span><a routerLink="/products/edit/{{ p.Id }}">Edit</a></span>
+        </td>
+    </tr>
+</table>
+
+<div class="Function">
+  <button class="btn btn-dark" routerLink="/products/create">Add Product</button>
+</div>
+</div>
