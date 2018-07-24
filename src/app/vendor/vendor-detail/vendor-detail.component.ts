@@ -17,6 +17,22 @@ export class VendorDetailComponent implements OnInit {
 
   vendor: Vendor = new Vendor;
 
+  Removed: boolean = false;
+
+  Remove(): void {
+    this.Removed = true;
+  }
+
+  Verified(): void {
+    this.Removed = false;
+    this.vensvc.remove(this.vendor)
+      .subscribe(resp => {
+        console.log("Remove user:", resp);
+        this.router.navigateByUrl('/vendors/list');
+      });
+  }
+
+
   constructor( 
     private vensvc: VendorService,
     private router: Router,

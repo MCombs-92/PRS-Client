@@ -1,0 +1,21 @@
+#Content {
+    width: 33%;
+    margin: auto;
+    margin-top: 50px;
+    height: 85vh;
+}
+
+label {
+    width: 100px;
+    background-color: #391439;
+    color: white;
+}
+
+#Function {
+    text-align: center;
+}
+
+#Function .btn {
+    width: 200px;
+
+}

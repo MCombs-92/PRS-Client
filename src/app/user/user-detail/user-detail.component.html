@@ -63,10 +63,11 @@
       </div>
 
       <div id="function">
-          <button routerLink="/users/edit/{{user.Id}}" class="btn btn-lg btn-success">Update Info</button>
-          <button (click)="Remove()" class="btn btn-lg btn-danger">Remove User</button>
+          <button routerLink="/users/edit/{{user.Id}}" class="btn btn-success edit">Update Info</button>
+          <span> | </span>
+          <button (click)="Remove()" class="btn btn-danger edit">Remove User</button>
           <span *ngIf="Removed">
-            | <button (click)="Verified()" class="btn btn-lg btn-danger">Confirm</button>
+            | <button (click)="Verified()" class="btn btn-danger confirm">Confirm</button>
 
           </span>
       </div>

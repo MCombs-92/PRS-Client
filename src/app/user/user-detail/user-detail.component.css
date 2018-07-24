@@ -7,6 +7,8 @@
 
 label {
     width: 100px;
+    background-color: #391439;
+    color: white;
 }
 
 #function {
@@ -14,5 +16,14 @@ label {
 }
 
 #function button {
+    margin: 10px;
+}
+
+.edit {
+    margin: 10px;
+    width: 200px;
+}
+
+.confirm {
     margin: 10px;
 }

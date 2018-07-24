@@ -12,3 +12,8 @@ label {
 #function {
     text-align: center;
 }
+
+#function .btn {
+    width: 200px;
+
+}

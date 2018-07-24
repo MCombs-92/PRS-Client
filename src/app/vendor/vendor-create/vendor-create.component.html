@@ -1,3 +1,84 @@
-<p>
-  vendor-create works!
-</p>
+<div id= "Content">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Name">Name</label>
+      </div>
+      <input [(ngModel)]="vendor.Name" name="Name" type="text" class="form-control" id="Name">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Code">Code</label>
+      </div>
+      <input [(ngModel)]="vendor.Code" name="Code" type="text" class="form-control" id="Code">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Address">Address</label>
+      </div>
+      <input [(ngModel)]="vendor.Address" name="Address" type="text" class="form-control" id="Address">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="City">City</label>
+      </div>
+      <input [(ngModel)]="vendor.City" name="City" type="text" class="form-control" id="City">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="State">State</label>
+      </div>
+      <input [(ngModel)]="vendor.State" name="State" type="text" class="form-control" id="State">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Zip">Zip</label>
+      </div>
+      <input [(ngModel)]="vendor.Zip" name="Zip" type="text" class="form-control" id="Zip">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Email">Email</label>
+      </div>
+      <input [(ngModel)]="vendor.Email" name="Email" type="text" class="form-control" id="Email">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Phone">Phone</label>
+      </div>
+      <input [(ngModel)]="vendor.Phone" name="Phone" type="text" class="form-control" id="Phone">
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class= "input-group-text" for="IsPreApproved">Approved?</label>
+     </div>
+      <select [(ngModel)]="vendor.IsPreApproved" name="IsPreApproved" class="form-control" id="IsPreApproved">
+        <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{opt.display}}</option>
+      </select >
+    </div>
+  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class= "input-group-text" for="Active">Active?</label>
+      </div>
+      <select [(ngModel)]="vendor.Active" name="Active" class="form-control" id="Active">
+        <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{opt.display}}</option>
+      </select >
+    </div>
+  
+    <div id="Function">
+      <button class = " btn btn-primary" (click)="create()">Update</button>
+  
+    </div>
+  
+  
+  </div>
+  

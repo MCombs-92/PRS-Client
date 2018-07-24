@@ -71,8 +71,13 @@
 </div>
 
 <div id="Function">
-  <button>Update Info</button>
-  <button>Remove Vendor</button>
+  <button class ="btn btn-success edit" routerLink="/vendors/edit/{{vendor.Id}}">Update Info</button>
+  <span> | </span>
+  <button (click)="Remove()" class="btn btn-danger edit">Remove Vendor</button>
+  <span *ngIf="Removed">
+    | <button (click)="Verified()" class="btn btn-danger confirm">Confirm</button>
+
+  </span>
 
 </div>
 

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
@@ -17,6 +18,10 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { SortPipe } from './Utility/sort.pipe';
 import { BoolPipe } from './Utility/bool.pipe';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +37,18 @@ import { BoolPipe } from './Utility/bool.pipe';
     VendorEditComponent,
     VendorDetailComponent,
     SortPipe,
-    BoolPipe
+    BoolPipe,
+    ProductListComponent,
+    ProductCreateComponent,
+    ProductEditComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

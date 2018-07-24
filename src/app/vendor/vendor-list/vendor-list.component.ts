@@ -9,6 +9,8 @@ import { Vendor } from '../vendor';
 })
 export class VendorListComponent implements OnInit {
 
+  Title: String = "Registered Vendors";
+
   boolOptions = [
     { display: 'Yes', value: true },
     { display: 'No', value: false }

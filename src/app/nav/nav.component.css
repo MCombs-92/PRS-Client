@@ -5,16 +5,16 @@
 
 #topnav {
     background-color: #391439;
-    height: 65px;
+    height: px;
 }
 
-#home {
+.right {
     float: right;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 10px 25px 10px 0px;
+    margin-right: 20px;
     color: white;
     font-size: 20pt;
 }
