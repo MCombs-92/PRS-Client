@@ -60,7 +60,7 @@
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class= "input-group-text" for="Acitve">Is Active</label>
+          <label class= "input-group-text" for="Active">Is Active</label>
        </div>
         <select [(ngModel)]="user.Active" name="Active" class="form-control" id="Active">
           <option *ngFor="let opt of boolOptions" [ngValue]="opt.value">{{opt.display}}</option>

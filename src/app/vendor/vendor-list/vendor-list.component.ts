@@ -9,6 +9,11 @@ import { Vendor } from '../vendor';
 })
 export class VendorListComponent implements OnInit {
 
+  boolOptions = [
+    { display: 'Yes', value: true },
+    { display: 'No', value: false }
+  ];
+
   vendors: Vendor[];
 
   constructor(private vensvc: VendorService) { }

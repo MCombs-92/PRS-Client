@@ -22,9 +22,9 @@
       <td>{{ user.Password }}</td>
       <td>{{ user.Email }}</td>
       <td>{{ user.Phone }}</td>
-      <td>{{ user.IsReviewer }}</td>
-      <td>{{ user.IsAdmin }}</td>
-      <td>{{ user.Active }}</td>
+      <td>{{ user.IsReviewer | bool }}</td>
+      <td>{{ user.IsAdmin | bool  }}</td>
+      <td>{{ user.Active | bool  }}</td>
       <td>
           <span><a routerLink="/users/detail/{{user.Id}}">Detail</a> | </span>
           <span><a routerLink="/users/edit/{{user.Id}}">Edit</a></span>
@@ -32,6 +32,6 @@
     </tr>
   </table>
   <div id="Controls">
-      <button class="btn btn-dark btn-lg" routerLink="/users/create">Add User</button>
+      <button class="btn btn-dark" routerLink="/users/create">Add User</button>
   </div>
 </div>

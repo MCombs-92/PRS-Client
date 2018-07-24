@@ -9,6 +9,8 @@
         <th>Zip</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Approved?</th>
+        <th>Active?</th>
         <th>Actions</th>
     
     </tr>
@@ -21,10 +23,12 @@
         <td>{{ v.Zip }}</td>
         <td>{{ v.Email }}</td>
         <td>{{ v.Phone }}</td>
+        <td>{{ v.IsPreApproved | bool }}</td>
+        <td>{{ v.Active | bool }}</td>
         <td>
           <span><a routerLink="/vendors/detail/{{ v.Id }}">Detail</a></span>
           <span> | </span>
-          <span>Edit</span>
+          <span><a routerLink="/vendors/edit/{{ v.Id }}">Edit</a></span>
         </td>
     </tr>
 </table>

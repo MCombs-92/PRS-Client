@@ -9,6 +9,11 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent implements OnInit {
 
+  boolOptions = [
+    { display: 'Yes', value: true },
+    { display: 'No', value: false }
+  ];
+
   users: User[];
 
   Header = "Registered Users";
