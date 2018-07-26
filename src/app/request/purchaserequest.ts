@@ -18,7 +18,6 @@ export class PurchaseRequest {
       this.Justification = "None";
       this.DeliveryMode = 'Pickup';
       this.Status = 'NEW';
-      this.Total = 0;
       this.Active = true;
     }
 

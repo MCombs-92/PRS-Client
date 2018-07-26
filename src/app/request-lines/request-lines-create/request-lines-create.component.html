@@ -1,3 +1,17 @@
-<p>
-  request-lines-create works!
-</p>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class= "input-group-text" for="Product">Product</label>
+   </div>
+    <select [(ngModel)]="request.ProductId" name="Product" class="form-control" id="Product">
+      <option *ngFor="let p of products" [ngValue]="p.Id">{{ p.Name }}</option>
+    </select >
+  </div>
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Quantity">Quantity</label>
+      </div>
+      <input [(ngModel)]="request.Quantity" name="Quantity" type="text" class="form-control" id="Quantity">
+    </div>
+
+  <button (click)="create()">Create</button>

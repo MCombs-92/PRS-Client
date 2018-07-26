@@ -1,0 +1,33 @@
+<div id="Content">
+  <table class="table table-striped">
+    <tr>
+      <th>User</th><td>{{ request.User.Username }}</td>
+      <th>Description</th><td>{{ request.Description }}</td>
+      <th>Justification</th><td>{{ request.Justification }}</td>
+      <th>Status</th><td>{{ request.Status }}</td>
+    </tr>
+  </table>
+</div>
+
+<div id="request">
+  <table class="table table-striped">
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr *ngFor ="let li of request.PurchaseRequestLineItems">
+      <td>{{ li.Product.Name }}</td>
+      <td>{{ li.Quantity }}</td>
+      <td>{{ li.Product.Price | currency }}</td>
+      <td>{{ li.Quantity * li.Product.Price | currency }}</td>
+      <td>ACtions></td>
+    </tr>
+  </table>
+
+  <button routerLink="/requestlines/create/{{ request.Id }}">Create</button>
+
+</div>

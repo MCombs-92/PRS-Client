@@ -20,6 +20,12 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+
+import { RequestLinesListComponent } from './request-lines/request-lines-list/request-lines-list.component';
+import { RequestLinesCreateComponent } from './request-lines/request-lines-create/request-lines-create.component';
+import { RequestLinesEditComponent } from './request-lines/request-lines-edit/request-lines-edit.component';
+import { RequestLinesDetailComponent } from './request-lines/request-lines-detail/request-lines-detail.component';
 
 
 import { HomeComponent } from './home/home.component';
@@ -47,6 +53,12 @@ const routes: Routes = [
   {path: 'requests/create', component: RequestCreateComponent},
   {path: 'requests/edit/:id', component: RequestEditComponent},
   {path: 'requests/detail/:id', component: RequestDetailComponent},
+  {path: 'requests/lines/:prid', component: RequestLinesComponent},
+
+  {path: 'requestlines/list', component: RequestLinesListComponent},
+  {path: 'requestlines/create/:prid', component: RequestLinesCreateComponent},
+  {path: 'requestlines/edit/:id', component: RequestLinesEditComponent},
+  {path: 'requestlines/detail/:id', component: RequestLinesDetailComponent},
 
   {path: '**', component: HomeComponent}
 ];
