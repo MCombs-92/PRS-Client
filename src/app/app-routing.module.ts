@@ -45,8 +45,8 @@ const routes: Routes = [
 
   {path: 'requests/list', component: RequestListComponent},
   {path: 'requests/create', component: RequestCreateComponent},
-  {path: 'requests/detail/:id', component: RequestEditComponent},
-  {path: 'requests/edit/:id', component: RequestDetailComponent},
+  {path: 'requests/edit/:id', component: RequestEditComponent},
+  {path: 'requests/detail/:id', component: RequestDetailComponent},
 
   {path: '**', component: HomeComponent}
 ];

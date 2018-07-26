@@ -15,6 +15,7 @@ export class PurchaseRequest {
     constructor() {
       this.Id = 0;
       this.UserId = 0;
+      this.Justification = "None";
       this.DeliveryMode = 'Pickup';
       this.Status = 'NEW';
       this.Total = 0;

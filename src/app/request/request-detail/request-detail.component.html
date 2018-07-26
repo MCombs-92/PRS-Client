@@ -1,3 +1,49 @@
-<p>
-  request-detail works!
-</p>
+<div id="Content">
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="User">User</label>
+      </div>
+      <input [(ngModel)]="request.User.Username" name="User" readonly type="text" class="form-control" id="User">
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="Description">Description</label>
+    </div>
+    <input [(ngModel)]="request.Description" name="Description" readonly type="text" class="form-control" id="Description">
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="Justification">Justification</label>
+    </div>
+    <input [(ngModel)]="request.Justification" name="Justification" readonly type="text" class="form-control" id="Justification">
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="Total">Total</label>
+    </div>
+    <input [(ngModel)]="request.Total" name="Total" readonly type="text" class="form-control" id="Total">
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="Active">Active?</label>
+    </div>
+    <input [(ngModel)]="request.Active" name="Active" readonly type="text" class="form-control" id="Active">
+  </div>
+
+  <div id="Function">
+    <button class ="btn btn-success edit" routerLink="/requests/edit/{{request.Id}}">Update Info</button>
+    <span> | </span>
+    <button (click)="Remove()" class="btn btn-danger edit">Remove User</button>
+    <span *ngIf="Removed">
+      | <button (click)="Verified()" class="btn btn-danger confirm">Confirm</button>
+  
+    </span>
+  
+  </div>
+  
+  </div>
